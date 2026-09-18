@@ -474,3 +474,23 @@ h1:hover,
     outline: none !important;
     box-shadow: none;
 }
+
+
+header h1,
+.toc-title {
+    display: inline-block;
+    padding: 8px 18px;
+    border-radius: 50px; /* Schön weich & rund (Pill-Form) */
+    transition: all 0.25s ease;
+    cursor: pointer;
+}
+
+/* Hover- & Touch-Zustand */
+header h1:hover,
+header h1:active,
+.toc-title:hover,
+.toc-title:active {
+    background-color: rgba(114, 239, 221, 0.12); /* Zartes Mint-Leuchten */
+    color: var(--primary-color);
+    border-radius: 50px !important; /* Bleibt auch beim Drücken garantiert rund */
+}
