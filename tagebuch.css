@@ -418,3 +418,32 @@ header p {
         scroll-margin-top: 75px;
     }
 }
+
+
+/* Gilt für deinen Button (je nachdem wie deine Klasse heißt) */
+.copy-btn,
+.copy-btn-inline {
+    /* 1. Entfernt das native Handy-Button-Styling */
+    -webkit-appearance: none;
+    appearance: none;
+
+    /* 2. Entfernt den grauen/blauen eckigen Klick-Kasten auf Smartphones */
+    -webkit-tap-highlight-color: transparent;
+
+    /* 3. Verhindert die eckige Browser-Fokuslinie beim Antippen */
+    outline: none;
+
+    /* 4. Verhindert, dass das Icon auf dem Handy blau markiert/ausgewählt wird */
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+/* Entfernt den eckigen Rahmen im aktiven & fokussierten Zustand */
+.copy-btn:focus,
+.copy-btn:active,
+.copy-btn-inline:focus,
+.copy-btn-inline:active {
+    outline: none;
+    box-shadow: none;
+}
