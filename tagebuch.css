@@ -447,3 +447,30 @@ header p {
     outline: none;
     box-shadow: none;
 }
+
+
+/* 1. Entfernt den eckigen Klick-Kasten global auf allen Touchscreens */
+* {
+    -webkit-tap-highlight-color: transparent !important;
+}
+
+/* 2. Für h1, Buttons und interaktive Elemente */
+h1,
+.toc-title,
+button,
+a {
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+}
+
+/* 3. Verhindert unschöne eckige Fokus-Ränder beim Antippen */
+h1:focus,
+h1:active,
+h1:hover,
+.toc-title:focus,
+.toc-title:active,
+.toc-title:hover {
+    outline: none !important;
+    box-shadow: none;
+}
