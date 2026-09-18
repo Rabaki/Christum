@@ -12,6 +12,30 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="vavbar.css">
     <link rel="stylesheet" href="copy.css">
+
+    <style>
+  /* 1. Global auf der gesamten Seite deaktivieren */
+  html, body, * {
+      -webkit-tap-highlight-color: transparent !important;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+      outline: none !important;
+  }
+
+  /* 2. Verhindert das blaue Text-Markieren beim Tippen */
+  h1, .toc-title, button, .copy-btn, .copy-btn-inline {
+      user-select: none !important;
+      -webkit-user-select: none !important;
+      -webkit-touch-callout: none !important;
+  }
+
+  /* 3. Entscheidend für Handys: cursor: pointer nur für echte Mäuse aktivieren! */
+  @media (hover: none) and (pointer: coarse) {
+      h1, .toc-title, button, a {
+          cursor: default !important; /* Verhindert das automatische blaue Android-Highlight */
+          -webkit-tap-highlight-color: transparent !important;
+      }
+  }
+</style>
 </head>
 
 <body>
@@ -19,7 +43,7 @@
 
     <header>
         <h1 class="toc-title">🌿 الأمل للجميع 🌿 </h1>
-        <h2>T6</h2>
+        <h2>T7</h2>
     </header>
 
     <nav class="toc-card">
