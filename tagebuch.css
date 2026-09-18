@@ -494,3 +494,29 @@ header h1:active,
     color: var(--primary-color);
     border-radius: 50px !important; /* Bleibt auch beim Drücken garantiert rund */
 }
+
+/* Verhindert das blaue Text-Markieren und den mobilen Klick-Kasten */
+h1,
+.toc-title,
+button,
+.copy-btn,
+.copy-btn-inline {
+    /* 1. Verhindert die blaue Text-Auswahlbox */
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+
+    /* 2. Entfernt den mobilen Tap-Kasten */
+    -webkit-tap-highlight-color: transparent !important;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+
+    /* 3. Entfernt Fokus-Rahmen */
+    outline: none !important;
+}
+
+/* Verhindert Callout-Menüs (wie "Kopieren / Nachschlagen" auf iOS) */
+h1,
+.toc-title {
+    -webkit-touch-callout: none !important;
+}
