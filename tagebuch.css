@@ -298,3 +298,123 @@ header p {
 }
 
 
+
+
+/* ========================================================= */
+/* Optimierungen für Smartphones & kleinere Bildschirme       */
+/* ========================================================= */
+
+@media (max-width: 768px) {
+
+    /* 1. Body & Seitenabstände verkleinern */
+    body {
+        padding: 70px 12px 30px 12px; /* Oben Platz für den fixen Header lassen */
+    }
+
+    .container,
+    .journal-container {
+        gap: 16px;
+        margin-bottom: 24px;
+        width: 100%;
+    }
+
+    /* 2. Header kompakt & lesbar halten */
+    header {
+        padding: 10px 14px;
+    }
+
+    header h1 {
+        font-size: 1.35rem;
+    }
+
+    /* 3. Kärtchen kompakter gestalten (weniger Innenabstand) */
+    .verse-card,
+    .journal-entry {
+        padding: 20px 16px; /* Statt 35px */
+        border-radius: 12px;
+        border-right-width: 4px; /* Dünnerer grüner Akzentrand */
+    }
+
+    /* 4. Typografie für kleine Displays anpassen */
+    .verse-text {
+        font-size: 1.35rem;
+        line-height: 1.8;
+        margin-bottom: 14px;
+    }
+
+    .entry-title {
+        font-size: 1.4rem;
+        line-height: 1.4;
+    }
+
+    .entry-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .explanation-title,
+    .card-section-title {
+        font-size: 1.15rem;
+        margin-top: 18px;
+    }
+
+    .explanation-text,
+    .entry-content {
+        font-size: 0.98rem;
+        line-height: 1.8;
+        text-align: right; /* Auf Smartphones liest sich rechtsbündig oft besser als Blocksatz */
+    }
+
+    /* 5. Highlight-Boxen kompakter */
+    .highlight-box {
+        font-size: 1.05rem;
+        padding: 14px 14px;
+        margin: 16px 0 8px 0;
+    }
+
+    /* 6. Tagebuch-Header (Datum & Mood) */
+    .entry-header {
+        margin-bottom: 24px; /* Statt 50px */
+    }
+
+    .entry-date {
+        font-size: 0.85rem;
+    }
+
+    .entry-mood {
+        font-size: 1.1rem;
+    }
+
+    /* 7. Tabellen scrollbar machen (verhindert Zerschießen des Layouts) */
+    table {
+        display: block;
+        width: 100% !important;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        font-size: 0.88rem;
+    }
+
+    th, td {
+        padding: 6px 8px !important;
+        white-space: normal;
+    }
+
+    /* 8. Gebets-Strophen (Kurmancî & Arabisch) */
+    .main-content {
+        padding: 16px;
+        gap: 20px;
+    }
+
+    .strophe-row .links {
+        font-size: 1.05rem;
+    }
+
+    .strophe-row .rechts {
+        font-size: 1.15rem;
+    }
+
+    /* 9. Scroll-Margin für den fixen Header */
+    .verse-card,
+    .journal-entry {
+        scroll-margin-top: 75px;
+    }
+}
