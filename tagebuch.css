@@ -449,77 +449,10 @@ header p {
 }
 
 
-/* 1. Entfernt den eckigen Klick-Kasten global auf allen Touchscreens */
-* {
-    -webkit-tap-highlight-color: transparent !important;
-}
-
-/* 2. Für h1, Buttons und interaktive Elemente */
-h1,
-.toc-title,
-button,
-a {
-    outline: none;
-    -webkit-tap-highlight-color: transparent;
-    -webkit-touch-callout: none;
-}
-
-/* 3. Verhindert unschöne eckige Fokus-Ränder beim Antippen */
-h1:focus,
-h1:active,
-h1:hover,
-.toc-title:focus,
-.toc-title:active,
-.toc-title:hover {
-    outline: none !important;
-    box-shadow: none;
-}
 
 
-header h1,
-.toc-title {
-    display: inline-block;
-    padding: 8px 18px;
-    border-radius: 50px; /* Schön weich & rund (Pill-Form) */
-    transition: all 0.25s ease;
-    cursor: pointer;
-}
 
-/* Hover- & Touch-Zustand */
-header h1:hover,
-header h1:active,
-.toc-title:hover,
-.toc-title:active {
-    background-color: rgba(114, 239, 221, 0.12); /* Zartes Mint-Leuchten */
-    color: var(--primary-color);
-    border-radius: 50px !important; /* Bleibt auch beim Drücken garantiert rund */
-}
 
-/* Verhindert das blaue Text-Markieren und den mobilen Klick-Kasten */
-h1,
-.toc-title,
-button,
-.copy-btn,
-.copy-btn-inline {
-    /* 1. Verhindert die blaue Text-Auswahlbox */
-    -webkit-user-select: none !important;
-    -moz-user-select: none !important;
-    -ms-user-select: none !important;
-    user-select: none !important;
-
-    /* 2. Entfernt den mobilen Tap-Kasten */
-    -webkit-tap-highlight-color: transparent !important;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
-
-    /* 3. Entfernt Fokus-Rahmen */
-    outline: none !important;
-}
-
-/* Verhindert Callout-Menüs (wie "Kopieren / Nachschlagen" auf iOS) */
-h1,
-.toc-title {
-    -webkit-touch-callout: none !important;
-}
 
 
 .done {
