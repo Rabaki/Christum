@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // 1. Alle Kärtchen standardmäßig deaktivieren
     allCards.forEach(card => card.classList.remove("is-active"));
+    allCards.forEach(card => card.classList.add("is-active"));
 
     // 2. Inhaltsverzeichnis dynamisch aufbauen
     items.forEach((element, index) => {
@@ -23,8 +24,8 @@ document.addEventListener("DOMContentLoaded", () => {
             .replace(/\s+/g, " ")
             .trim();
 
-        if (title.length > 55) {
-            title = title.substring(0, 52) + "...";
+        if (title.length > 160) {
+            title = title.substring(0, 160) + "...";
         }
 
         const li = document.createElement("li");

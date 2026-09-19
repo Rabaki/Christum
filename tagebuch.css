@@ -520,3 +520,23 @@ h1,
 .toc-title {
     -webkit-touch-callout: none !important;
 }
+
+
+.done {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 16px 24px;
+    margin: 16px 0;
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: #9a0d14;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(154, 13, 20, 0.45); /* roter Schatten statt grün */
+    border: 1px solid #7d0a10;                     /* dezente Kantenbetonung */
+    box-sizing: border-box;
+}
