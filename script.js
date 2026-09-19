@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const allCards = document.querySelectorAll(".verse-card, .journal-entry");
 
     // 1. Alle Kärtchen standardmäßig deaktivieren
-    allCards.forEach(card => card.classList.remove("is-active"));
+   // allCards.forEach(card => card.classList.remove("is-active"));
     allCards.forEach(card => card.classList.add("is-active"));
 
     // 2. Inhaltsverzeichnis dynamisch aufbauen
