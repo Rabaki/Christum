@@ -19,9 +19,12 @@ document.addEventListener('DOMContentLoaded', () => {
             const verseRef = card.querySelector('.verse-reference');
             const strophes = card.querySelectorAll('.strophe-row');
 
+            // Text der Referenz ohne den Button-Text auslesen
+            const cleanRef = verseRef ? verseRef.childNodes[0]?.textContent.trim() || verseRef.innerText.trim() : '';
+
             // Fall A: Klassische Vers-Karten (nur Vers + Referenz)
-            if (verseText && verseRef) {
-                textToCopy = `${verseText.innerText.trim()}\n\n${verseRef.innerText.trim()}`;
+            if (verseText && cleanRef) {
+                textToCopy = `${verseText.innerText.trim()}\n\n${cleanRef}`;
             } 
             // Fall B: Gebetskarten mit Strophen (ohne Nebentexte)
             else if (strophes.length > 0) {
@@ -37,6 +40,11 @@ document.addEventListener('DOMContentLoaded', () => {
             // Fallback (falls keine Referenz vorhanden ist)
             else if (verseText) {
                 textToCopy = verseText.innerText.trim();
+            }
+
+            // \u200F (Right-to-Left Mark) zwingt das Zielprogramm zur RTL-Ausrichtung
+            if (textToCopy) {
+                textToCopy = '\u200F' + textToCopy;
             }
 
             try {
@@ -64,6 +72,3 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
-
-
-
