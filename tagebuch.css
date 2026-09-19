@@ -276,13 +276,7 @@ header p {
     }
 }
 
-/* Standardmäßig alle Kärtchen deaktivieren / ausblenden */
-.verse-card,
-.journal-entry {
-    display: none;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
+
 
 /* Nur die aktivierte Karte anzeigen */
 .verse-card.is-active,
